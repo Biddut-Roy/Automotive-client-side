@@ -7,8 +7,8 @@ const Navbar = () => {
     const list = <>
     
     <li><NavLink to={"/"}>Home</NavLink></li>                   
-    <li><NavLink to={"/favorite"}>Add Product</NavLink></li>                   
-    <li><NavLink to={"/food"}>My Cart</NavLink></li>                                     
+    <li><NavLink to={"/Product"}>Add Product</NavLink></li>                   
+    <li><NavLink to={"/Card"}>My Cart</NavLink></li>                                     
 </>
     return (
         <div className="navbar bg-base-100">
@@ -30,14 +30,16 @@ const Navbar = () => {
         </div>
         <div className="navbar-end space-x-2">
           <div className="hidden md:flex lg:flex">
-            
+               {/* <p>{user&& user.displayName}</p> */}
                <p>username</p>
           </div>
           <div className=" w-10 h-10  ">
-             
+               {/* <img className=" rounded-full" src={user? user.photoURL:``} alt="" /> */}
           </div>
           {
-           
+            // user?
+            // <NavLink ><button className=" btn btn-neutral">Log out</button></NavLink>
+            // :
             <NavLink to={"/login"}><button className=" btn btn-neutral">Login</button></NavLink>
           }
         </div>
