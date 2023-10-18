@@ -8,6 +8,7 @@ import Login from "../pages/Login and Register/Login";
 import Add from "../pages/AddProduct/Add";
 import Models from "../pages/brandCard/Models";
 import Erroe from "../pages/ErrorPAge/Erroe";
+import DetailsCard from "../pages/brandCard/productDetails/DetailsCard";
 
 
 
@@ -35,9 +36,14 @@ import Erroe from "../pages/ErrorPAge/Erroe";
           element: <Add></Add>,
         },
         {
-          path: "/models/:id",
+          path: "/models/:name",
           element: <Models></Models>,
-          loader:({params})=>fetch(`http://localhost:5000/models/${params.id}`)
+          loader:({params})=>fetch(`http://localhost:5000/models/${params.name}`)
+        },
+        {
+          path: "/models/id/:id",
+          element:<DetailsCard></DetailsCard>,
+          loader:({params})=>fetch(`http://localhost:5000/models/id/${params.id}`)
         },
 
       ],

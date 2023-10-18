@@ -21,7 +21,7 @@ const ModelCard = ({model}) => {
       Price: ${price}
     </h5>
     <div className=" ">
-   <Link to={`/models/${_id}`}>
+   <Link to={`/models/id/${_id}`}>
    <button 
       className="select-none rounded-lg bg-pink-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
       type="button"
@@ -44,9 +44,6 @@ ModelCard.propTypes = {
       price: PropTypes.number.isRequired,
       photo: PropTypes.string.isRequired,
       _id: PropTypes.string.isRequired,
-      brand: PropTypes.string.isRequired,
-      rating: PropTypes.number.isRequired,
-      type: PropTypes.string.isRequired,
     }).isRequired,
   };
 
