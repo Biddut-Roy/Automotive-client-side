@@ -6,7 +6,7 @@ const Card = ({brand}) => {
     return (
         <div className="relative flex flex-col text-gray-700 bg-white shadow-md lg:w-[75%] lg:mx-auto rounded-xl bg-clip-border">
   <div className="relative mx-4 mt-6 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
-    <img className=' mx-auto'
+    <img className=' mx-auto rounded-md'
       src={photo}
       alt="img-blur-shadow"
       
@@ -22,7 +22,7 @@ const Card = ({brand}) => {
       type="button"
       data-ripple-light="true"
     >
-      View details
+     BRAND Model
     </button>
   </div>
   </div>

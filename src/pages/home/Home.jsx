@@ -1,6 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import Card from "../brandCard/Card";
 import Banner from "../banner/Banner";
+import CarModel from "../topCarModel/CarModel";
+import Gallery from "../Gallery/Gallery";
 
 
 
@@ -14,6 +16,14 @@ const Home = () => {
                 {
                     brandData?.map((brand, idx) => <Card brand={brand} key={idx}></Card>)
                 }
+            </div>
+            <div>
+                <h1 className=" text-center text-2xl font-semibold">Top 3 Model in World</h1>
+                <CarModel></CarModel>
+            </div>
+            <div>
+                <h1 className=" text-center text-2xl font-semibold">Gallery</h1>
+                <Gallery></Gallery>
             </div>
         </div>
     );
