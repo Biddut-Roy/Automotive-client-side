@@ -1,15 +1,39 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { globalAuthContext } from "../../Authprovider/GlobalAuth";
+import Swal from "sweetalert2";
 
 
 const Navbar = () => {
-
+    const { user , logOut } = useContext(globalAuthContext)
 
     const list = <>
-    
     <li><NavLink to={"/"}>Home</NavLink></li>                   
     <li><NavLink to={"/Product"}>Add Product</NavLink></li>                   
     <li><NavLink to={"/Card"}>My Cart</NavLink></li>                                     
 </>
+
+    const Out = ()=>{
+      logOut()
+      .then(() => {
+          Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: 'Log Out sucessfully',
+              showConfirmButton: false,
+              timer: 1500
+            })
+      }).catch((error) => {
+          Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: `${error.message}`,
+              showConfirmButton: false,
+              timer: 1500
+            })
+      });
+
+    }
     return (
         <div className="navbar bg-base-100">
         <div className="navbar-start">
@@ -30,16 +54,15 @@ const Navbar = () => {
         </div>
         <div className="navbar-end space-x-2">
           <div className="hidden md:flex lg:flex">
-               {/* <p>{user&& user.displayName}</p> */}
-               <p>username</p>
+               <p>{user&& user.displayName}</p>
           </div>
           <div className=" w-10 h-10  ">
-               {/* <img className=" rounded-full" src={user? user.photoURL:``} alt="" /> */}
+               <img className=" rounded-full" src={user? user.photoURL:``} alt="" />
           </div>
           {
-            // user?
-            // <NavLink ><button className=" btn btn-neutral">Log out</button></NavLink>
-            // :
+            user?
+            <NavLink ><button onClick={Out} className=" btn btn-neutral">Log out</button></NavLink>
+            :
             <NavLink to={"/login"}><button className=" btn btn-neutral">Login</button></NavLink>
           }
         </div>
