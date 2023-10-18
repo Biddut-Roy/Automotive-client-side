@@ -51,7 +51,7 @@ const Register = () => {
                 timer: 1500
               })
           });
-    
+          form.reset();
     }
 
     // Google 

@@ -6,13 +6,13 @@ import Swal from "sweetalert2";
 
 const Navbar = () => {
     const { user , logOut } = useContext(globalAuthContext)
-
     const list = <>
     <li><NavLink to={"/"}>Home</NavLink></li>                   
     <li><NavLink to={"/Product"}>Add Product</NavLink></li>                   
     <li><NavLink to={"/Card"}>My Cart</NavLink></li>                                     
 </>
 
+//  log out 
     const Out = ()=>{
       logOut()
       .then(() => {

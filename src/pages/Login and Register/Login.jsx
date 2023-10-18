@@ -35,7 +35,8 @@ const Login = () => {
                 timer: 1500
               })
            console.log(error.message);
-          });    
+          });  
+          form.reset();  
     }
 
     //  google log in
