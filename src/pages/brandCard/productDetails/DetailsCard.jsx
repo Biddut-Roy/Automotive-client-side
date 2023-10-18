@@ -7,6 +7,7 @@ const DetailsCard = () => {
     const product = useLoaderData();
     const {name ,price, photo , description ,brand , rating , type} = product ;
 
+
     const handelCard=()=>{
         fetch("http://localhost:5000/mycard",{
             method: "POST",

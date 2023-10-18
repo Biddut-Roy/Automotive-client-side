@@ -41,7 +41,7 @@ const ModelCard = ({model}) => {
 ModelCard.propTypes = {
     model: PropTypes.shape({
       name: PropTypes.string.isRequired,
-      price: PropTypes.number.isRequired,
+      price: PropTypes.string.isRequired,
       photo: PropTypes.string.isRequired,
       _id: PropTypes.string.isRequired,
     }).isRequired,

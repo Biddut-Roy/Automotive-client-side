@@ -4,7 +4,6 @@ import Swal from 'sweetalert2';
 
 const Card = ({my , setCard ,cards}) => {
     const {_id ,name ,price, photo , description ,brand , type} = my;
-
     const handelDelete =()=>{
         Swal.fire({
             title: 'Are you sure?',
@@ -48,8 +47,8 @@ const Card = ({my , setCard ,cards}) => {
         <p className="py-6">{description}</p>
         </div>
         <div className=''>
-            <button onClick={handelDelete} className='btn btn-block'>Delete</button>
-            <Link><button className='btn btn-block'>Update</button></Link>
+            <button onClick={handelDelete} className='btn btn-block text-red-400'>Delete</button>
+            <Link to={`/update/${_id}`}><button className='btn btn-block'>Update</button></Link>
         </div>
         <div>
 

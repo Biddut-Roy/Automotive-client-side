@@ -10,6 +10,9 @@ import Models from "../pages/brandCard/Models";
 import Erroe from "../pages/ErrorPAge/Erroe";
 import DetailsCard from "../pages/brandCard/productDetails/DetailsCard";
 import MyCard from "../pages/Mycard/MyCard";
+import Update from "../pages/Mycard/Update/Update";
+import Private from "../PrivateRoute/Private";
+
 
 
 
@@ -34,7 +37,7 @@ import MyCard from "../pages/Mycard/MyCard";
         },
         {
           path: "/Product",
-          element: <Add></Add>,
+          element: <Private><Add></Add></Private>,
         },
         {
           path: "/models/:name",
@@ -51,6 +54,12 @@ import MyCard from "../pages/Mycard/MyCard";
           element:<MyCard></MyCard>,
           loader:()=>fetch("http://localhost:5000/mycard")
         },
+        {
+            path:"/update/:id",
+            element: <Update></Update>,
+            loader: ({params})=>fetch(`http://localhost:5000/models/id/${params.id}`)
+        },
+        
 
       ],
     },

@@ -1,16 +1,25 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { globalAuthContext } from "../../Authprovider/GlobalAuth";
 import Swal from "sweetalert2";
 
 
 const Navbar = () => {
+  const [theme, setTheme] = useState('dark');
     const { user , logOut } = useContext(globalAuthContext)
     const list = <>
     <li><NavLink to={"/"}>Home</NavLink></li>                   
     <li><NavLink to={"/Product"}>Add Models</NavLink></li>                   
     <li><NavLink to={"/card"}>My Cart</NavLink></li>                                     
 </>
+
+const toggleTheme = () => {
+  setTheme(theme === 'light' ? 'dark' : 'light');
+};
+
+useEffect(() => {
+  document.querySelector('html').setAttribute('data-theme', theme);
+}, [theme]);
 
 //  log out 
     const Out = ()=>{
@@ -65,6 +74,11 @@ const Navbar = () => {
             :
             <NavLink to={"/login"}><button className=" btn btn-neutral">Login</button></NavLink>
           }
+              <label className="swap swap-rotate">
+              <input onClick={toggleTheme} type="checkbox" />
+              <div className="swap-on">DARK</div>
+              <div className="swap-off">LIGHT</div>
+            </label>
         </div>
       </div>
     );

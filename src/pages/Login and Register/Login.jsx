@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from 'react-icons/Fc';
 import { useContext } from "react";
 import { globalAuthContext } from "../../Authprovider/GlobalAuth";
@@ -8,6 +8,7 @@ import Swal from "sweetalert2";
 const Login = () => {
     const {login , signInGoogle}= useContext(globalAuthContext)
     const navigate = useNavigate();
+    const location = useLocation();
 
     const handelLogin = (e) =>{
         e.preventDefault();
@@ -23,7 +24,7 @@ const Login = () => {
                 showConfirmButton: false,
                 timer: 1500
               })
-              navigate("/")
+              navigate(location?.state? location.state : "/" )
               console.log(userCredential);
           })
           .catch((error) => {
@@ -50,7 +51,7 @@ const Login = () => {
             showConfirmButton: false,
             timer: 1500
           })
-          navigate("/")
+          navigate(location?.state? location.state : "/" )
           console.log(result.user);
         })
        .catch((error) => {
