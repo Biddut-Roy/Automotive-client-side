@@ -5,6 +5,13 @@
 ## Project Functionality
 - Clicking on a brand will show all the products of that brand.
 - The data can be changed by pressing the update button on the card.
+<<<<<<< HEAD
 - 2nd theme used. A dark and is a white.
 - All the data in my card will come from the data added to the add card list.
 - If you enter wrong data to log in, firebase will show error
+=======
+- 2nd theme used. A dark and is a whait.
+- All the data in my card will come from the data added to the add card list.
+- If you enter wrong data to log in, firebase will show error
+
+>>>>>>> d87526e6f0585d7f5451ef5a7774887769f59f77
