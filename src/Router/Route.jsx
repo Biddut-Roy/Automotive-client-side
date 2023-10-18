@@ -9,6 +9,7 @@ import Add from "../pages/AddProduct/Add";
 import Models from "../pages/brandCard/Models";
 import Erroe from "../pages/ErrorPAge/Erroe";
 import DetailsCard from "../pages/brandCard/productDetails/DetailsCard";
+import MyCard from "../pages/Mycard/MyCard";
 
 
 
@@ -44,6 +45,11 @@ import DetailsCard from "../pages/brandCard/productDetails/DetailsCard";
           path: "/models/id/:id",
           element:<DetailsCard></DetailsCard>,
           loader:({params})=>fetch(`http://localhost:5000/models/id/${params.id}`)
+        },
+        {
+          path:"/card",
+          element:<MyCard></MyCard>,
+          loader:()=>fetch("http://localhost:5000/mycard")
         },
 
       ],

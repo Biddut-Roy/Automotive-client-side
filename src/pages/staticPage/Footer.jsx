@@ -7,7 +7,7 @@ const Footer = () => {
   <nav className="grid grid-flow-col gap-4">
         <NavLink to={"/"}>Home</NavLink>                
         <NavLink to={"/Product"}>Add models</NavLink>                
-        <NavLink to={"/Card"}>My Cart</NavLink>                     
+        <NavLink to={"/card"}>My Cart</NavLink>                     
         <NavLink to={"/register"}>Register</NavLink> 
   </nav> 
   <nav>

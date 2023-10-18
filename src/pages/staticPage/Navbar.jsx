@@ -9,7 +9,7 @@ const Navbar = () => {
     const list = <>
     <li><NavLink to={"/"}>Home</NavLink></li>                   
     <li><NavLink to={"/Product"}>Add Models</NavLink></li>                   
-    <li><NavLink to={"/Card"}>My Cart</NavLink></li>                                     
+    <li><NavLink to={"/card"}>My Cart</NavLink></li>                                     
 </>
 
 //  log out 
