@@ -1,8 +1,11 @@
-# React + Vite
+# TOP-AUTO-BRAND project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+-LIVE SITE LINK :https://automotive-brand-shop.web.app/
 
-Currently, two official plugins are available:
+## Project Functionality
+- Clicking on a brand will show all the products of that brand.
+- The data can be changed by pressing the update button on the card.
+- 2nd theme used. A dark and is a whait.
+- All the data in my card will come from the data added to the add card list.
+- If you enter wrong data to log in, firebase will show error
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
