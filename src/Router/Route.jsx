@@ -7,6 +7,7 @@ import Register from "../pages/Login and Register/Register";
 import Login from "../pages/Login and Register/Login";
 import Add from "../pages/AddProduct/Add";
 import Models from "../pages/brandCard/Models";
+import Erroe from "../pages/ErrorPAge/Erroe";
 
 
 
@@ -14,6 +15,7 @@ import Models from "../pages/brandCard/Models";
     {
       path: "/",
       element: <Root></Root>,
+      errorElement: <Erroe></Erroe>,
       children: [
         {
           path: "/",
