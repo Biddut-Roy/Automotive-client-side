@@ -8,7 +8,7 @@ const Navbar = () => {
     const { user , logOut } = useContext(globalAuthContext)
     const list = <>
     <li><NavLink to={"/"}>Home</NavLink></li>                   
-    <li><NavLink to={"/Product"}>Add Product</NavLink></li>                   
+    <li><NavLink to={"/Product"}>Add Models</NavLink></li>                   
     <li><NavLink to={"/Card"}>My Cart</NavLink></li>                                     
 </>
 

@@ -8,6 +8,7 @@ import Login from "../pages/Login and Register/Login";
 import Add from "../pages/AddProduct/Add";
 
 
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -30,6 +31,7 @@ import Add from "../pages/AddProduct/Add";
           path: "/Product",
           element: <Add></Add>,
         },
+
       ],
     },
   ]);

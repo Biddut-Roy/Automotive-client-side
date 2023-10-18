@@ -22,7 +22,7 @@ const Home = () => {
                 <CarModel></CarModel>
             </div>
             <div>
-                <h1 className=" text-center text-2xl font-semibold">Gallery</h1>
+                <h1 className=" text-center text-2xl my-4 border-t-2 border-solid font-semibold">BRAND Gallery</h1>
                 <Gallery></Gallery>
             </div>
         </div>
