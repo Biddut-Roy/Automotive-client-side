@@ -6,7 +6,7 @@ const CarModel = () => {
     const [carData , setCarData] = useState();
 
     useEffect(() =>{
-        fetch("http://localhost:5000/top3")
+        fetch("https://top-auto-brand-53sj6su0h-biddut-roys-projects.vercel.app/top3")
         .then(res=>res.json())
         .then(data => setCarData(data))
     },[])

@@ -25,7 +25,7 @@ import Private from "../PrivateRoute/Private";
         {
           path: "/",
           element: <Home></Home>,
-          loader: () => fetch("http://localhost:5000/brand")
+          loader: () => fetch("https://top-auto-brand-53sj6su0h-biddut-roys-projects.vercel.app/brand")
         },
         {
           path:"/login",
@@ -42,22 +42,22 @@ import Private from "../PrivateRoute/Private";
         {
           path: "/models/:name",
           element: <Models></Models>,
-          loader:({params})=>fetch(`http://localhost:5000/models/${params.name}`)
+          loader:({params})=>fetch(`https://top-auto-brand-53sj6su0h-biddut-roys-projects.vercel.app/models/${params.name}`)
         },
         {
           path: "/models/id/:id",
           element:<Private><DetailsCard></DetailsCard></Private>,
-          loader:({params})=>fetch(`http://localhost:5000/models/id/${params.id}`)
+          loader:({params})=>fetch(`https://top-auto-brand-53sj6su0h-biddut-roys-projects.vercel.app/models/id/${params.id}`)
         },
         {
           path:"/card",
           element:<Private><MyCard></MyCard></Private>,
-          loader:()=>fetch("http://localhost:5000/mycard")
+          loader:()=>fetch("https://top-auto-brand-53sj6su0h-biddut-roys-projects.vercel.app/mycard")
         },
         {
             path:"/update/:id",
             element: <Update></Update>,
-            loader: ({params})=>fetch(`http://localhost:5000/models/id/${params.id}`)
+            loader: ({params})=>fetch(`https://top-auto-brand-53sj6su0h-biddut-roys-projects.vercel.app/models/id/${params.id}`)
         },
         
 

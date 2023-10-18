@@ -17,7 +17,7 @@ const Add = () => {
         const rating = form.rating.value;
         const data = {name ,price, photo , description ,brand , rating , type}
         console.log(data);
-        fetch("http://localhost:5000/models" , {
+        fetch("https://top-auto-brand-53sj6su0h-biddut-roys-projects.vercel.app/models" , {
             method: "POST",
             body: JSON.stringify(data),
             headers: { 

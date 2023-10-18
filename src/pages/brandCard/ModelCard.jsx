@@ -13,7 +13,7 @@ const ModelCard = ({model}) => {
       
     />
   </div> 
-  <div className=' flex justify-around text-base lg:text-xl font-medium md:font-semibold lg:font-bold'>
+  <div className=' mt-3 flex justify-around text-base lg:text-xl font-medium md:font-semibold lg:font-bold'>
     <h5 className="mb-2 font-sans  text-center antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
       Brand: {brand}
     </h5>
@@ -39,10 +39,10 @@ const ModelCard = ({model}) => {
                     </div>
   </div>
   </div>
-  <div className=''>
+  <div className=' text-right'>
   <Link to={`/models/id/${_id}`}>
    <button 
-      className="select-none my-4 rounded-lg bg-pink-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+      className="select-none mx-5 my-4 rounded-lg bg-pink-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
       type="button"
       data-ripple-light="true"
     >

@@ -9,7 +9,7 @@ const DetailsCard = () => {
 
 
     const handelCard=()=>{
-        fetch("http://localhost:5000/mycard",{
+        fetch("https://top-auto-brand-53sj6su0h-biddut-roys-projects.vercel.app/mycard",{
             method: "POST",
             headers: {
                 "content-type": "application/json"

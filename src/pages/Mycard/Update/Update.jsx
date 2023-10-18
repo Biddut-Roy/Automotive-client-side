@@ -14,7 +14,7 @@ const Update = () => {
         const description = form.description.value;
         const rating = form.rating.value;
         const getData = {name ,price, photo , description ,rating}
-        fetch(`http://localhost:5000/models/id/${_id}` , {
+        fetch(`https://top-auto-brand-53sj6su0h-biddut-roys-projects.vercel.app/models/id/${_id}` , {
             method: "PUT",
             body: JSON.stringify(getData),
             headers: { 
