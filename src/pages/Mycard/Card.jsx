@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const Card = ({my , setCard ,cards}) => {
@@ -48,7 +47,7 @@ const Card = ({my , setCard ,cards}) => {
         </div>
         <div className=''>
             <button onClick={handelDelete} className='btn btn-block text-red-400'>Delete</button>
-            <Link to={`/update/${_id}`}><button className='btn btn-block'>Update</button></Link>
+            
         </div>
         <div>
 

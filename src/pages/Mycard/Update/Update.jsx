@@ -24,27 +24,13 @@ const Update = () => {
         .then(res => res.json())
         .then(data =>{
             if (data.modifiedCount > 0) {
-                fetch(`http://localhost:5000/mycard/${_id}` , {
-            method: "PATCH",
-            body: JSON.stringify(getData),
-            headers: { 
-                'Content-Type': 'application/json'
-                },
-            })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.modifiedCount > 0) {
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Success',
-                        text: 'Product has been added successfully',
-                    })
-                }
-            })
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: 'Product has been added successfully',
+                })
             }
-        } )
-            
+            })        
             
 
         form.reset();

@@ -46,12 +46,12 @@ import Private from "../PrivateRoute/Private";
         },
         {
           path: "/models/id/:id",
-          element:<DetailsCard></DetailsCard>,
+          element:<Private><DetailsCard></DetailsCard></Private>,
           loader:({params})=>fetch(`http://localhost:5000/models/id/${params.id}`)
         },
         {
           path:"/card",
-          element:<MyCard></MyCard>,
+          element:<Private><MyCard></MyCard></Private>,
           loader:()=>fetch("http://localhost:5000/mycard")
         },
         {
