@@ -6,6 +6,7 @@ import Home from "../pages/home/Home";
 import Register from "../pages/Login and Register/Register";
 import Login from "../pages/Login and Register/Login";
 import Add from "../pages/AddProduct/Add";
+import Models from "../pages/brandCard/Models";
 
 
 
@@ -30,6 +31,11 @@ import Add from "../pages/AddProduct/Add";
         {
           path: "/Product",
           element: <Add></Add>,
+        },
+        {
+          path: "/models/:id",
+          element: <Models></Models>,
+          loader:({params})=>fetch(`http://localhost:5000/models/${params.id}`)
         },
 
       ],
