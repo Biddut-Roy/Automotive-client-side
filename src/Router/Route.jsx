@@ -56,7 +56,7 @@ import Private from "../PrivateRoute/Private";
         },
         {
             path:"/update/:id",
-            element: <Update></Update>,
+            element: <Private><Update></Update></Private>,
             loader: ({params})=>fetch(`https://top-auto-brand-53sj6su0h-biddut-roys-projects.vercel.app/models/id/${params.id}`)
         },
         

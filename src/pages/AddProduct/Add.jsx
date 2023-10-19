@@ -26,7 +26,7 @@ const Add = () => {
         })
         .then(res => res.json())
         .then(data => {
-            if (data.acknowledged) {
+            if (data.insertedId) {
                 Swal.fire({
                     icon: 'success',
                     title: 'Success',
